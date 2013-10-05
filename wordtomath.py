@@ -1,12 +1,16 @@
 import re
-file = open('/home/oleksandr/repos/learning/task1.txt', 'r')
+import sys
+
+read_path = sys.argv[1]
+
+file = open(read_path, 'r')
 text = file.read()
 
 wordlist = re.split(' ',text)
 
 output_string = ''
 
-with open('/home/oleksandr/repos/learning/task1_new.txt', 'w') as file_new:
+with open(read_path[:-4]+ '_output.txt', 'w') as file_new:
     for word in wordlist:
         if word == ('one'):
             output_string += '1'
@@ -30,4 +34,4 @@ with open('/home/oleksandr/repos/learning/task1_new.txt', 'w') as file_new:
             output_string += '0'
         else:
             output_string += word
-print(output_string)
+        print(output_string, file = file_new)
