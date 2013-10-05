@@ -34,4 +34,4 @@ with open(read_path[:-4]+ '_output.txt', 'w') as file_new:
             output_string += '0'
         else:
             output_string += word
-        print(output_string, file = file_new)
+    print(output_string, file = file_new)
