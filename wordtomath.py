@@ -1,40 +1,33 @@
 import re
-file = open('/home/demon/task1.txt', 'r')
+file = open('/home/oleksandr/repos/learning/task1.txt', 'r')
 text = file.read()
-print(text)
-wordlist = re.split(' |\n',text)
-print(wordlist)
-with open('/home/demon/task1_new.txt', 'w') as file_new:
+
+wordlist = re.split(' ',text)
+
+output_string = ''
+
+with open('/home/oleksandr/repos/learning/task1_new.txt', 'w') as file_new:
     for word in wordlist:
         if word == ('one'):
-            word = 1
-            print(word, file = file_new)
+            output_string += '1'
         elif word == ('two'):
-            word = 2
-            print(word, file = file_new)
+            output_string += '2'
         elif word == ('three'):
-            word = 3
-            print(word, file = file_new)
+            output_string += '3'
         elif word == ('four'):
-            word = 4
-            print(word, file = file_new)
+            output_string += '4'
         elif word == ('five'):
-            word = 5
-            print(word, file = file_new)
+            output_string += '5'
         elif word == ('six'):
-            word = 6
-            print(word, file = file_new)
+            output_string += '6'
         elif word == ('seven'):
-            word = 7
-            print(word, file = file_new)
+            output_string += '7'
         elif word == ('eight'):
-            word = 8
-            print(word, file = file_new)
+            output_string += '8'
         elif word == ('nine'):
-            word = 9
-            print(word, file = file_new)
+            output_string += '9'
         elif word == ('zero'):
-            word = 0
-            print(word, file = file_new)
+            output_string += '0'
         else:
-            print(word, file = file_new)
+            output_string += word
+print(output_string)
